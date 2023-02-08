@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setupNavigation()
-        isShown()
+        preference()
     }
 
-    private fun isShown() {
+    private fun preference() {
         preferenceHelper.unit(this)
         if (!preferenceHelper.onSaveOnBoardState) {
             navController.navigate(R.id.noteAppFragment)
