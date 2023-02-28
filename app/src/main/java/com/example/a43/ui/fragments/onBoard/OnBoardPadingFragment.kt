@@ -1,4 +1,4 @@
-package com.example.a43.ui.fragments
+package com.example.a43.ui.fragments.onBoard
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

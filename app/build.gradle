@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'androidx.navigation.safeargs'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -58,4 +60,8 @@ dependencies {
 
     //lottie
     implementation 'com.airbnb.android:lottie:3.4.0'
+    //Room
+    def room_version = "2.5.0"
+    implementation ("androidx.room:room-runtime:$room_version")
+    kapt ("androidx.room:room-compiler:2.5.0")
 }

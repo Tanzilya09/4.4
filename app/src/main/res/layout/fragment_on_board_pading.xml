@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".ui.fragments.OnBoardPadingFragment">
+    tools:context=".ui.fragments.onBoard.OnBoardPadingFragment">
 
     <TextView
         android:id="@+id/tv_text"

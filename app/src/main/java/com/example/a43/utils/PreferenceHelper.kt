@@ -14,4 +14,8 @@ class PreferenceHelper {
     var onSaveOnBoardState: Boolean
         set(value) = sharePreference.edit().putBoolean("yes", value).apply()
         get() = sharePreference.getBoolean("yes", true)
+
+    var signUp:Boolean
+        set(value) = sharePreference.edit().putBoolean("sign",value).apply()
+        get() = sharePreference.getBoolean("sign",false)
 }

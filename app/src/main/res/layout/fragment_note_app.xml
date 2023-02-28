@@ -1,14 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.NoteAppFragment">
+    android:background="@color/black"
+    tools:context=".ui.fragments.home.NoteAppFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_actionbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/black"
+        android:backgroundTint="@color/black_2"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="50dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:text="заметки"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_menu_24"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="20dp"
+            android:contentDescription="menu" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/s"
+            android:layout_gravity="center_vertical|end"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="menu2" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <EditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/rounder"
+        android:drawableStart="@drawable/baseline_search_24"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:text=""
+        android:textColor="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cv_actionbar"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notResView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_material"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_material"
+        android:layout_width="60sp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/orange"
+        android:text="+"
+        android:textSize="35sp"
+        app:cornerRadius="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

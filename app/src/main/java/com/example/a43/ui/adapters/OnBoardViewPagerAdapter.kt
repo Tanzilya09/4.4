@@ -3,8 +3,8 @@ package com.example.a43.ui.adapters
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
-import com.example.a43.ui.fragments.OnBoardPadingFragment
-import com.example.a43.ui.fragments.OnBoardPadingFragment.Companion.ARG_ONBOARD_PAGE_POSITION
+import com.example.a43.ui.fragments.onBoard.OnBoardPadingFragment
+import com.example.a43.ui.fragments.onBoard.OnBoardPadingFragment.Companion.ARG_ONBOARD_PAGE_POSITION
 
 class OnBoardViewPagerAdapter(fragment: Fragment): FragmentStateAdapter(fragment) {
 
